@@ -1,0 +1,7 @@
+Test 11: Realloc (testing unable to realloc)
+
+This test case tests when realloc is unable to find a block to reallocate.
+We force this case by adding 1 to the size to be reallocated to (By looking
+at the code, you'll see that once realloc is called on the specific pointer, 
+the two blocks of 2^22 will coalesce toget to a block of size 2^23. However
+we require a realloc size of 2^23 + 1). 

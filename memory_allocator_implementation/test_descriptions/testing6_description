@@ -1,0 +1,8 @@
+Test 6: Malloc (mallocing just beneath powers of 2 each time) 
+
+This test case tests the block finding capability of my
+virtual_malloc algorithm in finding the smallest power
+of two block in the right position. We begin with an intial
+size of 512 then call virtual_malloc(255), virtual_malloc(31),
+virtual_malloc(33), virtual_malloc(65) and virtual_malloc(1)
+while calling the print function after each malloc

@@ -1,0 +1,50 @@
+      if (t1 != 0) {
+	 printf("Error in CAL t1\n");
+	 return 1;
+      }
+      if (v1 > 7) {
+	 printf("Error in CAL v1\n");
+	 return 1;
+      }
+      // SET UP FOR THE CAL FUNCTION : we "push" r0, r1, r2, r3, old bp, the return address and the current function
+      // registers: r0, r1, r2 and r3
+      for (int i = 0; i < 4; i++) {
+	 stack[registers[6]] = registers[i];
+	 registers[6] = registers[6] + 1;
+
+	 if (registers[6] >= MAX_BYTE_SIZE) {
+	    return 1;
+	 }
+      }
+      // old bp
+      stack[registers[6]] = registers[5];
+      registers[6] = registers[6] + 1;
+
+      if (registers[6] >= MAX_BYTE_SIZE) {
+	 return 1;
+      }
+
+      // return address
+      stack[registers[6]] = registers[7];
+      registers[6] = registers[6] + 1;
+
+      if (registers[6] >= MAX_BYTE_SIZE) {
+	 return 1;
+      }
+
+      // current function
+      stack[registers[6]] = registers[4];
+      registers[6] = registers[6] + 1;
+
+      if (registers[6] >= MAX_BYTE_SIZE) {
+	 return 1;
+      }
+
+      // update bp
+      registers[5] = registers[6];
+
+      // we now interpret the instruction. 
+      struct inst* temp = NULL;
+      registers[7] = ft[v1];				 // update the program counter
+      registers[4] = v1;				 // update the current function we are on
+      find_function(&temp, head, ft[v1]);		 // update temp pointer

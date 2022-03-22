@@ -1,0 +1,9 @@
+Test 10: Realloc (testing reallocing whole heap)
+
+This test case tests realloc twice. The idea behind each realloc
+is to coalsce to a section that can then be allocated via
+the realloc function. The sequence of functions called here 
+(with inital_size = 10, min_size = 6) are:
+virtual_malloc(256), virtual_malloc(64), 
+virtual_realloc(virtual_heapstart, 256), 
+virtual_free(first block) and virtual_free(second block).

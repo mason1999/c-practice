@@ -1,0 +1,29 @@
+      if (registers[4] != 0) {
+	 while(registers[6] != registers[5]) {
+	    registers[6] = registers[6] - 1;
+	 }
+	 // restore previous function
+	 registers[4] = stack[registers[6] - 1];
+	 registers[6] = registers[6] - 1;
+	 // return address
+	 registers[7] = stack[registers[6] - 1];
+	 registers[6] = registers[6] - 1;
+	 // registers
+	 registers[3] = stack[registers[6] -1];
+	 registers[6] = registers[6] - 1;
+
+
+	 registers[2] = stack[registers[6] -1];
+	 registers[6] = registers[6] - 1;
+	 
+
+	 registers[1] = stack[registers[6] -1];
+	 registers[6] = registers[6] - 1;
+
+
+	 registers[0] = stack[registers[6] -1];
+	 registers[6] = registers[6] - 1;
+
+	 // old bp
+	 registers[5] = stack[registers[6] - 1];
+	 registers[6] = registers[6] -1;

@@ -1,0 +1,21 @@
+free 33554432
+
+allocated 16777216
+free 16777216
+
+allocated 16777216
+allocated 4194304
+free 4194304
+free 8388608
+
+allocated 16777216
+allocated 4194304
+free 4194304
+allocated 8388608
+
+Error: unable to allocate in virtual_realloc. Returned (NULL)
+
+allocated 16777216
+allocated 4194304
+free 4194304
+allocated 8388608

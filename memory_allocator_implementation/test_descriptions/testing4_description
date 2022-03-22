@@ -1,0 +1,5 @@
+Test 4: Malloc (Below smallest granularity and size 0) 
+
+This test case mallocs a blocks smaller than or equal to min_size until 
+the whole heap is used. It then mallocs a block of size 0, printing an 
+appropriate error message. 

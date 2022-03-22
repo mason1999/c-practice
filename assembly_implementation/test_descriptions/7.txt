@@ -1,0 +1,1 @@
+Testing bad type 2: We cannot take the address of a register

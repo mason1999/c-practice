@@ -1,0 +1,5 @@
+Error: heapstart was (NULL) in init_allocator
+Error: heapstart was (NULL) in virtual_malloc
+Error: heapstart was (NULL) in virtual_realloc
+Error: heapstart was (NULL) in virtual_info
+Error: heapstart was (NULL) in virtual_free

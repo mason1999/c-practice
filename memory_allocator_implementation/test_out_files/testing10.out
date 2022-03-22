@@ -1,0 +1,21 @@
+free 1024
+
+allocated 256
+free 256
+free 512
+
+allocated 256
+allocated 64
+free 64
+free 128
+free 512
+
+allocated 256
+allocated 256
+free 512
+
+free 256
+allocated 256
+free 512
+
+allocated 1024

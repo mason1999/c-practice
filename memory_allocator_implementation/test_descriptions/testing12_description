@@ -1,0 +1,8 @@
+Test 12: Realloc (testing size = 0 and ptr = NULL)
+
+We test the cases when the ptr parameter is NULL (so
+this reduces to a malloc) and then we test when the size
+parameter is 0 (so this reduces to a free). Since we're 
+basically mallocing and freeing (for simplicity we malloc
+THEN free the same block), we should arrive back at the original
+block we had. 

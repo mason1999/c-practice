@@ -1,0 +1,6 @@
+Test 9: Free (testing pointer not found)
+
+This test case tests trying to free a pointer that
+is not allocated. We do this by adding one to the address
+which heapstart points to and trying to free that address. 
+We expect an error.

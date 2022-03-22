@@ -1,0 +1,1 @@
+Here we change the value of STK symbol A via the pointer to it's address, STK symbol B

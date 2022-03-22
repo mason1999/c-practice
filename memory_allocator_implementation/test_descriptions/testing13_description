@@ -1,0 +1,8 @@
+Test 13: Realloc (testing truncating and enlarging)
+
+We test the abillity of the Realloc function to truncate the 
+a block and enlarge it. given intial_size = 8 and min_size = 3
+we first malloc half the size of initial_size. We then realloc
+this to the min_size (thus truncating it). We then finally 
+realloc this back to the initial_size of the heap (thus 
+enlarging it). We finish by freeing. 

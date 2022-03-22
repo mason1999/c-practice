@@ -1,0 +1,1 @@
+For this test case here, we use addition to simulate subtraction. Since 28 + 231 = 259, we see that since we're working in modulo 256 the value outputted should be a 3. In essence, this is 28 - 25

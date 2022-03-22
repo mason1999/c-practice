@@ -1,0 +1,7 @@
+Test 2: Error checking (NULL heapstart) 
+
+This test case will check the case when heapstart is NULL in our five
+functions: init_allocator, virtual_malloc, virtual_realloc, virtual_info
+and virtual_free. We perform the operations in that order, returning 1 
+upon failing virtual_free in main. We print appropriate error messages to
+each one. 

@@ -1,0 +1,7 @@
+Test 5: Malloc (size too large/no available block found) 
+
+This test case tests virtual_malloc, where there are no available
+blocks able to be found. It begins with 2 normal mallocs, but then
+tries to malloc a size of just one bigger than the biggest block.
+It then tries to malloc a size of the original heap: ultimately
+producing two errors. 

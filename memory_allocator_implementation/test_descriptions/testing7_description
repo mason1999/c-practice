@@ -1,0 +1,6 @@
+Test 7: Error checking for Free
+
+This test case tests error checking: when the
+program tries to free a block which is already freed. 
+The simplest way to check this is to try and free the
+initial heap once it has been initialised.

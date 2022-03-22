@@ -1,0 +1,2 @@
+This test case is the first of 5 testing faulty type values executed. This is a MOV VAL VAL (with the fact that VAL isn't a memory address) forcing the undefined
+behaviour. Since I did error checking in my assembly, the assembly isn't printed out correctly. 

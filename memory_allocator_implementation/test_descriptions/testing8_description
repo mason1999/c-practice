@@ -1,0 +1,9 @@
+Test 8: Free (testing coalescing)
+
+This test case tests the coalescing function of my freeing.
+We begin with a heap of size 256 bytes and minimum size block
+of 16 bytes. We then malloc 128 bytes, and then malloc the 
+smallest granularity (16 bytes). We then free the first 128 
+bytes (noting that the coalesing is being stopped by the 
+block of size 16 bytes). We then free the block of size 16. 
+It will pass if the final block is a block of size 256.

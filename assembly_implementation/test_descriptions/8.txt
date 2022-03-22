@@ -1,0 +1,1 @@
+Testing bad type 3: You cannot move from a stack symbol that doesn't exist yet. 

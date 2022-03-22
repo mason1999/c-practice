@@ -1,0 +1,2 @@
+Here, this test cases tests when there are two function labels for the function zero (which acts as main). We note that since the zero function acts as main, 
+the program should return a 1 because we cannot have two main functions. This is a fault of my program. 

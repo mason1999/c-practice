@@ -1,0 +1,15 @@
+free 256
+
+allocated 16
+free 16
+free 32
+free 64
+free 128
+
+allocated 16
+free 16
+free 32
+allocated 64
+free 128
+Error: couldn't allocate 129 bytes
+Error: couldn't allocate 256 bytes

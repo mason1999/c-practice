@@ -1,0 +1,65 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include "../virtual_alloc.h"
+#include "../virtual_sbrk.h"
+#include "../functions.h"
+
+void * virtual_heap = NULL;
+int32_t my_program_break = 0;
+
+// When you call virtual_sbrk, given an increment, it returns a pointer to your virtual_heap
+void * virtual_sbrk(int32_t increment) {
+   // Your implementation here (for your testing only)
+
+   if (virtual_heap == NULL) {
+      fprintf(stderr, "Error virtual_heap doens't point to any space\n");
+   }
+
+   my_program_break = my_program_break + increment;
+
+   if (my_program_break < 0) {
+      fprintf(stderr, "Error you cannot decrement to before heap space\n");
+      return (void*)(-1);
+   }
+
+   if (my_program_break > 35000000) {
+      fprintf(stderr, "Error you cannot increment past the whole heap\n");
+      return (void*)(-1);
+   }
+
+   char* temp = (char*)virtual_heap + my_program_break;
+   return (void*)temp;
+
+}
+
+int main() {
+
+   // Your own testing code here
+
+   // We malloc the maximum amount available 
+   virtual_heap = malloc(35000000);
+   init_allocator(virtual_heap, 9, 5);
+   virtual_info(virtual_heap);
+   printf("\n");
+   virtual_malloc(virtual_heap, 16);
+   virtual_malloc(virtual_heap, 31);
+   virtual_malloc(virtual_heap, 30);
+   virtual_malloc(virtual_heap, 5);
+   virtual_malloc(virtual_heap, 14);
+   virtual_malloc(virtual_heap, 9);
+   virtual_malloc(virtual_heap, 21);
+   virtual_malloc(virtual_heap, 4);
+   virtual_malloc(virtual_heap, 29);
+   virtual_malloc(virtual_heap, 17);
+   virtual_malloc(virtual_heap, 22);
+   virtual_malloc(virtual_heap, 25);
+   virtual_malloc(virtual_heap, 29);
+   virtual_malloc(virtual_heap, 13);
+   virtual_malloc(virtual_heap, 12);
+   virtual_malloc(virtual_heap, 3);
+   virtual_info(virtual_heap);
+   virtual_malloc(virtual_heap, 0);
+   free(virtual_heap);
+    return 0;
+
+}

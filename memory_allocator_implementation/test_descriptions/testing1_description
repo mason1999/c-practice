@@ -1,0 +1,4 @@
+Test 1: Testing boundary case
+
+This test will test the potential boundary case of a heap of size 1 byte.
+We virtual_malloc(1) byte and then free it. 

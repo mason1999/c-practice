@@ -1,0 +1,4 @@
+FUNC LABEL 0
+    MOV STK A VAL 4
+    REF STK A REG 4
+    RET
